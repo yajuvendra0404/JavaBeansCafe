@@ -52,4 +52,4 @@ jobs:
           app-name: 'JavaBeansCafe'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_11C61F0EC9D2429B9CFD2427BB1A96E4 }}
-          package: .
+          package: ./dist/practise-app-two

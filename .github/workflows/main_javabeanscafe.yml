@@ -27,7 +27,7 @@ jobs:
           npm run build --if-present
       - name: Zip dist folder
         run: |
-          zip -r practise-app-two.zip ./dist/practise-app-two
+          zip -r practise-app-two.zip ./dist/practise-app-two/*
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2

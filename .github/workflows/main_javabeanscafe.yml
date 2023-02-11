@@ -27,13 +27,13 @@ jobs:
           npm run build --if-present
       - name: Zip dist folder
         run: |
-          zip -r practise-app-two.zip dist/practise-app-two
+          zip -r practise-app-two.zip ./dist/practise-app-two
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./dist/practise-app-two.zip
+          path: practise-app-two.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
         with:
           name: node-app
       - name: unzip artifact for deployment
-        run: unzip ./dist/practise-app-two.zip
+        run: unzip practise-app-two.zip
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
